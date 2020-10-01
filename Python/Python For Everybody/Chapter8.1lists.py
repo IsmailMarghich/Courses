@@ -5,9 +5,9 @@ except: #if file isnt recognized, start over again
     print('File cannot be opened')
     exit()
 lst = list()
-for line in fh:
+for line in fh: 
     words = line.split()
-    for word in words:
-        if word not in lst:
-            lst.append(word)
-print(sorted(lst))
+    for word in words: #for every word in the file
+        if word not in lst: #condition that it isnt already in the list
+            lst.append(word) #add the word to the list
+print(sorted(lst)) #output the sorted list without duplicated words

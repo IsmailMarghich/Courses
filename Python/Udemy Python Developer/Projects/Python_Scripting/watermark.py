@@ -1,6 +1,6 @@
 import PyPDF2  # import pdf to read our pdfs 
 
-pdf = input('which pdf file do you wanna watermark') #ask for the file name to water mark
+pdf = input('which pdf file do you wanna watermark?: ') #ask for the file name to water mark
 input_pdf = PyPDF2.PdfFileReader(open(f'{pdf}', 'rb')) #open the input file in read binary mode
 watermark = PyPDF2.PdfFileReader(open('watermark.pdf', 'rb')) #open the watermark file in read binary mode
 output = PyPDF2.PdfFileWriter() #make an output object as a file writer

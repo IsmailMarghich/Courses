@@ -1,0 +1,9 @@
+
+*.log
+Python/Udemy Python Developer/Projects/Python_Web_Development/venv/Lib/site-packages/click-7.1.2.dist-info/INSTALLER
+*.pyc
+*.rst
+Python/Udemy Python Developer/Projects/Python_Web_Development/venv/Lib/site-packages/click-7.1.2.dist-info/METADATA
+*.exe
+*.bat
+*.cfg

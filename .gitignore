@@ -1,5 +1,6 @@
 
 *.log
-/include
-/Lib
-/Scripts
+include/
+Lib/
+Scripts/
+*.cfg

@@ -7,3 +7,4 @@ Scripts/
 *.pyc
 images/
 flaskdatabase.csv
+chromedriver.exe

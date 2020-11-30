@@ -5,7 +5,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def route():
-    return redirect('http://127.0.0.1:5000/index.html')
+    return render_template('index.html')
 
 @app.route('/<string:page_name>')
 def html_page(page_name):

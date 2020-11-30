@@ -6,3 +6,4 @@ Scripts/
 *.cfg
 *.pyc
 images/
+flaskdatabase.csv

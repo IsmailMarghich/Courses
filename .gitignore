@@ -9,3 +9,7 @@ images/
 flaskdatabase.csv
 chromedriver.exe
 env/
+.ipynb_checkpoints/
+TrainAndValid.csv/
+Python/Udemy_ZeroToMastery_ML/bulldozerproject/data/train_tmp.csv
+Python/Udemy_ZeroToMastery_ML/bulldozerproject/data/TrainAndValid.csv

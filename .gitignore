@@ -8,3 +8,4 @@ Scripts/
 images/
 flaskdatabase.csv
 chromedriver.exe
+env/

@@ -1,4 +1,4 @@
-package CS_Programming_With_A_Purpose;
+package Java_Software_Engineering;
 
 public class HelloWorld {
  

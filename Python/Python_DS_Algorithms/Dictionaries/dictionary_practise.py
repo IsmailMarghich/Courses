@@ -47,3 +47,4 @@ print(all(dictionary)) #returns True if all values are either True or empty
 print(any(dictionary)) #returns True if any element is True, and False if all elements are False or empty
 print(sorted(dictionary, reverse=True)) #returns the input as a sorted datastructure, when reverse = True, it will be reversed
 #we can also add a key= parameter to specify on which basis to sort
+print(len(dictionary))

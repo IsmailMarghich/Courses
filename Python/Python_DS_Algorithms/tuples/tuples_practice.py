@@ -35,3 +35,7 @@ print(type(tupleinlist))
 listintuple = ([1],)
 print(listintuple)
 print(type(listintuple))
+#both can be nested
+#iterating through a tuple is faster than list
+#tuples can be used as immutable elements as keys for a dictionary
+#if you have data that doesnt cahnge, implementing it in a tuple will gurantee it remains write protected

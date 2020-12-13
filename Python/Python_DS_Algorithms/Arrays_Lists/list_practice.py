@@ -35,3 +35,19 @@ def linearsearch(list, value):
             return my_list.index(value)
     return 'The value could not be found in the list'
 print(linearsearch(my_list, 7))
+#list operations and functions
+print(my_list + sliced_list) #concatenate list
+print(my_list * 5) #multiply a list
+print(len(my_list)) #length of list
+print(max(my_list)) #maximum
+print(min(my_list)) #minimum
+print(sum(my_list)) #sum of elements
+print(sum(my_list)/len(my_list)) #average
+
+string = 'ABDCE'
+stringlist = list(string)
+print(stringlist)
+
+string = 'A-B-C-D-E' # we dont want the '-' in our list
+stringlist = string.split('-') #split it
+print(stringlist[::2])

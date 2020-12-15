@@ -19,14 +19,14 @@ class SLinkedList:
             self.head = newNode
             self.tail = newNode
         else:
-            if location == 0: #inserting first node
+            if location == 0: #if inserting before the head
                 newNode.next = self.head
                 self.head = newNode
-            elif location == 1: #inserting second node
+            elif location == -1: #if adding a tail
                 newNode.next = None
-                self.tail.next = newNode
+                self.tail.next = newNode 
                 self.tail = newNode
-            else: #inserting any node afterwards
+            else: #inserting any node in between head and tail
                 tempNode = self.head
                 index = 0
                 while index < location - 1:
@@ -63,7 +63,7 @@ class SLinkedList:
                     self.tail = None
                 else:
                     self.head = self.head.next
-            elif location == 1:
+            elif location == -1:
                 if self.head == self.tail:
                     self.head = None
                     self.tail = None
@@ -92,12 +92,15 @@ class SLinkedList:
 
 
 linkedlist = SLinkedList()
-linkedlist.insertSLL(1, 1)
+linkedlist.insertSLL(1, 0)
+linkedlist.insertSLL(7, -1)
 linkedlist.insertSLL(2, 1)
-linkedlist.insertSLL(3, 1)
-linkedlist.insertSLL(4, 1)
-linkedlist.insertSLL(0, 0)
-linkedlist.insertSLL(0, 3)
+linkedlist.insertSLL(3, 2)
+linkedlist.insertSLL(4, 3)
+linkedlist.insertSLL(5, 4)
+linkedlist.insertSLL(6, 5)
+linkedlist.insertSLL(7, -1)
+
 print([node.value for node in linkedlist])
 linkedlist.deleteNode(0)
 linkedlist.deleteEntireSLL()

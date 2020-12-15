@@ -15,26 +15,26 @@ class CircularLinkedList:
             if node == self.tail.next:
                 break
             
-    def createCSLL(self, nodeValue):
+    def createCSLL(self, nodeValue): #creating the first node which refers to itself
         node = Node(nodeValue)
         node.next = node
         self.head = node
         self.tail = node
         return 'The circular single linked list has been made'
-    def insertCSLL(self, value, location):
-        if self.head == None:
+    def insertCSLL(self, value, location): #inserting a node
+        if self.head == None: #if there is no head node
             return 'linked list doesnt exist'
         else:
             newNode = Node(value)
-            if location == 0:
+            if location == 0: #if adding a new head
                 newNode.next = self.head
                 self.head = newNode
                 self.tail.next = newNode
-            elif location == -1:
+            elif location == -1: #if adding a new tail
                 newNode.next = self.tail.next
                 self.tail.next = newNode
                 self.tail = newNode
-            else:
+            else: #if adding a node between head and tail
                 tempNode = self.head
                 index = 0
                 while index < location - 1:
@@ -72,16 +72,15 @@ class CircularLinkedList:
         if self.head is None:  # function to delete a node in list
            return "The list does not exist"
         else:
-            if location == 0:
+            if location == 0: #if deleting head node
                 if self.head == self.tail:
                     self.head.next = None
                     self.head = None
                     self.tail = None
-                    
                 else:
                     self.head = self.head.next
                     self.tail.next = self.head
-            elif location == -1:
+            elif location == -1: #if deleting tail node
                 if self.head == self.tail:
                     self.head.next = None
                     self.head = None
@@ -94,7 +93,7 @@ class CircularLinkedList:
                         node = node.next
                     node.next = self.head.next
                     self.tail = node
-            else:
+            else: #if deleting a node between head and tail
                 tempNode = self.head
                 index = 0
                 while index < location - 1:

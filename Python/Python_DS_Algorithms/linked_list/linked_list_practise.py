@@ -35,7 +35,7 @@ class SLinkedList:
                 nextNode = tempNode.next
                 tempNode.next = newNode
                 newNode.next = nextNode
-    def traverseSSL(self): #function to traverse a linked list
+    def traverseSLL(self): #function to traverse a linked list
         if self.head is None:
             return 'The linked list is empty'
         else:
@@ -43,7 +43,7 @@ class SLinkedList:
             while node is not None:
                 print(node.value)
                 node = node.next
-    def searchSSL(self, nodeValue):
+    def searchSLL(self, nodeValue):
         if self.head is None:
            return "The list does not exist"
         else:
@@ -99,7 +99,6 @@ linkedlist.insertSLL(3, 2)
 linkedlist.insertSLL(4, 3)
 linkedlist.insertSLL(5, 4)
 linkedlist.insertSLL(6, 5)
-linkedlist.insertSLL(7, -1)
 
 print([node.value for node in linkedlist])
 linkedlist.deleteNode(0)

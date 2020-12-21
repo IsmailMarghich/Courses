@@ -183,4 +183,4 @@ def deleteTree(rootNode): #this function will delete the whole tree by setting t
         return 'The binary tree has been deleted'
 deleteTree(binarytree)
 print('----------')
-LevelOrderTraversal(binarytree)
+LevelOrderTraversal(binarytree) #prints none because binary tree is now empty

@@ -109,4 +109,4 @@ insertNode(binaryheap, 1, 'Max')
 extractNode(binaryheap, 'Max')
 levelOrderTraversal(binaryheap)
 deleteEntireHeap(binaryheap)
-levelOrderTraversal(binaryheap)
+levelOrderTraversal(binaryheap) #this will error because the heap is empty

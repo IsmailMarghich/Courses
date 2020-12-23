@@ -54,11 +54,6 @@ def levelOrderTraversal(rootNode):
                 customQueue.enqueue(root.value.right)
 
 
-
-
-
-
-
 def binarysearch(rootNode, nodeValue):
     if rootNode.data == nodeValue: #check wether the node we start at is our target
         print('The value is found')

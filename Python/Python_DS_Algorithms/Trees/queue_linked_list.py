@@ -59,13 +59,3 @@ class Queue:
     def delete(self):
         self.linkedlist.head = None
         self.linkedlist.tail = None
-customqueue = Queue()
-customqueue.enqueue(1)
-customqueue.enqueue(2)
-customqueue.enqueue(3)
-print(customqueue)
-print(customqueue.dequeue())
-print(customqueue)
-print(customqueue.peek())
-customqueue.delete()
-print(customqueue)

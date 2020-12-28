@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-int main( )
+int main ( )
 {
-    printf("Hello, World!\n"
-           "My name is Ismail!"); //second like to print my name
+    printf (
+            "Hello, World\n "
+            "my name is Ismail");
     return 0;
 }

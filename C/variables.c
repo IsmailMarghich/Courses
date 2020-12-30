@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int age = 18, dadage = 50; //you can assign values to multiple variables
     printf("your age is %d\n", age);
     age += 2; //we can add to integers

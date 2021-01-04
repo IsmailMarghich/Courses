@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="00265377-a441-4f8d-b38d-6ddcdb6af0c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Beginner_C/strings.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/commandline.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/commandline.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/enum.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/enum.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/even_uneven.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/even_uneven.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/for_loop.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/for_loop.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/function.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/function.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/generate_prime.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/generate_prime.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/grades.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/grades.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/guessing_game.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/guessing_game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/helloworld.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/helloworld.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/input.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/input.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/minutes_to_years.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/minutes_to_years.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/operators.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/operators.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/rectangle_area.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/rectangle_area.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/tictactoe.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/tictactoe.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/variables.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/variables.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/weatherapp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/weatherapp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C/weeklypay.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/weeklypay.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mcRvpT8IDxz7MJxolIRMHYTTmc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00265377-a441-4f8d-b38d-6ddcdb6af0c2" name="Default Changelist" comment="" />
+      <created>1609791138172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609791138172</updated>
+      <workItem from="1609791140341" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17.3)
-project(C C)
+project(Beginner_C C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(C tictactoe.c)
+add_executable(C strings.c )
 

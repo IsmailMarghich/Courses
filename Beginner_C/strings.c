@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 //lets make use of some default C library string functions
+
+int stringlength(const char string[]);
+
 int main (void)
 {
     char string1[100] = "Hello";
@@ -49,5 +53,7 @@ int main (void)
         printf("%s\n", token); //printing the part until the token
         token = strtok(NULL, s); //and then we enter NULL in strok, this will make it go to the next segment
     }
+    printf("%c", toupper('g')); //with toupper or tolower function we can convert a character or string (using a loop and iterating) to upper or lowercase
+
 
 }

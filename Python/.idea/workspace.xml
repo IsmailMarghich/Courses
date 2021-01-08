@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00265377-a441-4f8d-b38d-6ddcdb6af0c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Beginner_C/structs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Beginner_C/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Beginner_C/CMakeLists.txt" afterDir="false" />
-    </list>
+    <list default="true" id="00265377-a441-4f8d-b38d-6ddcdb6af0c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +32,7 @@
       <workItem from="1609791140341" duration="35000" />
       <workItem from="1609944607825" duration="11000" />
       <workItem from="1610047857892" duration="13000" />
+      <workItem from="1610111156567" duration="4000" />
     </task>
     <servers />
   </component>

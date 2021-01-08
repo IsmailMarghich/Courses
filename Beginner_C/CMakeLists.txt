@@ -3,5 +3,5 @@ project(Beginner_C C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(C struct_functions.c)
+add_executable(C files.c)
 

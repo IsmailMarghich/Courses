@@ -3,5 +3,5 @@ project(Beginner_C C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(C files.c)
+add_executable(C file_reverse_print.c)
 

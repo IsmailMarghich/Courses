@@ -3,4 +3,4 @@ project(Advanced_C C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Advanced_C main.c)
+add_executable(Advanced_C favnumber.c favnumber.h)

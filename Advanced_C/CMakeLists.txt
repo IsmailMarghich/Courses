@@ -3,4 +3,4 @@ project(Advanced_C C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Advanced_C preprocessor.c)
+add_executable(Advanced_C void_pointer.c)

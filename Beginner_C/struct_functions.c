@@ -9,18 +9,18 @@
 
 
 struct item //making our item structure
-    {
+{
     char *itemName;
     int quantity;
     float price;
     float amount;
-    };
+};
 
 void readItem(struct item *i);
+
 void printItem(struct item *i);
 
-int main ( )
-{
+int main() {
     struct item itm; //setting our structure in itm
     struct item *pItem; //making a pointer
 
@@ -36,8 +36,7 @@ int main ( )
     return 0;
 }
 
-void readItem(struct item *i)
-{
+void readItem(struct item *i) {
     printf("Enter your product name: "); //read users input with scanf and use -> to assign it to struct
     setlinebuf(stdout);
     scanf("%s", i->itemName);
@@ -50,10 +49,11 @@ void readItem(struct item *i)
     setlinebuf(stdout);
     scanf("%d", &i->quantity);
 
-    i->amount = (float)i->quantity * i->price; //calculate total amount with quantity and price
+    i->amount = (float) i->quantity * i->price; //calculate total amount with quantity and price
 
 
 }
+
 void printItem(struct item *i) //print all of the values in struct
 {
     printf("\nName: %s", i->itemName);

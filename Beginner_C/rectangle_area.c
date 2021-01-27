@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(int argc, char *argv[]) //add commandline arguments to our main
 { //we set the default value to 1
     double area = 1; // width * height

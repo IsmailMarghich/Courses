@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 //this program will count from 1 to an integer that the user can enter, and prints the sun of these numbers
-int main ( )
-{
+int main() {
     unsigned int count = 0;
     unsigned int sum = 0;
 
@@ -10,8 +9,7 @@ int main ( )
     setlinebuf(stdout); //flush the print statement
     scanf("%d", &count);
 
-    for (int i = 1; i <= count; ++i)
-    {
+    for (int i = 1; i <= count; ++i) {
         printf("%d\n", i);
         sum += i;
     }

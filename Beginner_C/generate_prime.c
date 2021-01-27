@@ -3,8 +3,7 @@
 #include <stdbool.h>
 
 //the purpose of this program is print all the prime numbers in between 1 and 100 using an array
-int main()
-{
+int main() {
     int p;
     int i;
 
@@ -17,7 +16,7 @@ int main()
     primes[0] = 2;
     primes[1] = 3;
 
-    for(p = 5; p <= 100; p = p + 2) //start outer loop
+    for (p = 5; p <= 100; p = p + 2) //start outer loop
     {
         isPrime = true;
 
@@ -25,15 +24,14 @@ int main()
             if (p % primes[i] == 0)
                 isPrime = false;
 
-        if (isPrime == true)
-        {
+        if (isPrime == true) {
             primes[primeIndex] = p;
             ++primeIndex;
         }
     }
 
-    for ( i = 0;  i < primeIndex;  ++i )
-        printf ("%i  ", primes[i]);
+    for (i = 0; i < primeIndex; ++i)
+        printf("%i  ", primes[i]);
 
     printf("\n");
     return 0;

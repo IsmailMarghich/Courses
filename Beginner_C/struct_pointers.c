@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 
-int main ( ) {
+int main() {
     struct date //defining struct date
     {
         int year;

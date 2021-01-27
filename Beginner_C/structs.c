@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 //a struct can store multiple variables
-int main ( )
-{
+int main() {
     struct date //defining struct date
     {
         int year;

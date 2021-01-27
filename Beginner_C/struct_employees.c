@@ -10,7 +10,8 @@ struct employee { //create a struct with our data
     char date[15];
     float salary;
 };
-int main ( ) {
+
+int main() {
     struct employee emp1 = {"Mike", "8-1-2020", 23432.00f}; //set our first employee struct
     printf("\n Name: %s", emp1.name);
     printf("\n Hiredate: %s", emp1.name);

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main ( )
-{
+int main() {
     char str[100];
     int i;
     printf("Enter a number and then your name: \n");

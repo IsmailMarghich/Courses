@@ -2,16 +2,15 @@
 #include <stdlib.h>
 //print the contents of a file in reverse order, using positioning and functions like ftell() and fseek()
 #define FILENAME "reverse.txt"
-int main ( )
-{
+
+int main() {
     FILE *fp = NULL; //creating a file pointer
     int count = 0;
     int i = 0;
 
     fp = fopen(FILENAME, "r");
 
-    if (fp == NULL)
-    {
+    if (fp == NULL) {
         return -1;
     }
 

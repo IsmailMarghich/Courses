@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 //a tictactoe game
-char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' }; //our square board
+char square[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'}; //our square board
 int choice, player;
 
 int checkForWin();
+
 void displayBoard();
+
 void markBoard(char mark);
 
-int main()
-{
+int main() {
     int gameStatus;
 
     char mark;
 
     player = 1;
 
-    do
-    {
+    do {
         displayBoard();
 
         // change turns
@@ -37,7 +38,7 @@ int main()
 
         player++;
 
-    }while (gameStatus == -1);
+    } while (gameStatus == -1);
 
     if (gameStatus == 1)
         printf("==>\aPlayer %d win ", --player);
@@ -57,11 +58,9 @@ int checkForWin() //this checks for all possible ways a player can win
 {
     int returnValue = 0;
 
-    if (square[1] == square[2] && square[2] == square[3])
-    {
+    if (square[1] == square[2] && square[2] == square[3]) {
         returnValue = 1;
-    }
-    else if (square[4] == square[5] && square[5] == square[6])
+    } else if (square[4] == square[5] && square[5] == square[6])
         returnValue = 1;
 
     else if (square[7] == square[8] && square[8] == square[9])
@@ -150,8 +149,7 @@ void markBoard(char mark) //this just sets squares on the board to user input
 
     else if (choice == 9 && square[9] == '9')
         square[9] = mark;
-    else
-    {
+    else {
         printf("Invalid move ");
 
         player--;

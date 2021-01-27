@@ -3,8 +3,7 @@
 #include <math.h>
 #include <assert.h>
 
-int main ( )
-{
+int main() {
     int a = 5;
     int b = 10;
     //math functions

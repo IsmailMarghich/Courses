@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int main ( )
-{
-     int a = 25; //11001
-     int b = 77; //1001101
-     int c = 0;
+int main() {
+    int a = 25; //11001
+    int b = 77; //1001101
+    int c = 0;
 
     //the basic C bitwise operators
 
-    c = a & b; //the and & bitwise operator will set a bit to 1 only if both bits are 1 in the other binary numbers, otherwise its 1
+    c = a &
+        b; //the and & bitwise operator will set a bit to 1 only if both bits are 1 in the other binary numbers, otherwise its 1
     printf("%d\n", c); //9 =  1001
 
     c = a | b; // the or | operator will set a bit to 1 if its 1 on either binary number, otherwise it will set it to 0

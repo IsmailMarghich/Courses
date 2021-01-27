@@ -23,24 +23,24 @@
 #define CYAN    (GREEN | BLUE)
 #define WHITE   (RED | GREEN | BLUE)
 
-const char * colors[8] = {"black", "red", "green", "yellow",   "blue", "magenta", "cyan", "white"}; //our different colors
+const char *colors[8] = {"black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"}; //our different colors
 
 struct box_props {
-    bool opaque                 : 1;
-    unsigned int fill_color     : 3;
+    bool opaque: 1;
+    unsigned int fill_color: 3;
     unsigned int                : 4; //rest of byte we leave empty
-    bool show_border            : 1;
-    unsigned int border_color   : 3;
-    unsigned int border_style   : 2;
+    bool show_border: 1;
+    unsigned int border_color: 3;
+    unsigned int border_style: 2;
     unsigned int                : 2; //rest of byte we leave empty
 };
 
-void show_settings(const struct box_props * pb); //function to display the box, it will use a pointer
+void show_settings(const struct box_props *pb); //function to display the box, it will use a pointer
 
 int main(void) {
 
     /* create and initialize box_props structure */
-    struct box_props box = {true, YELLOW , true, GREEN, DASHED};
+    struct box_props box = {true, YELLOW, true, GREEN, DASHED};
 
     printf("Original box settings:\n");
     show_settings(&box);
@@ -54,19 +54,28 @@ int main(void) {
 
     return 0;
 }
-void show_settings(const struct box_props * pb)  //with our pointer we go to different parts of the struct and check for values to print out
-{
-    printf("Box is %s.\n", pb->opaque == true ? "opaque": "transparent");
-    printf("The fill color is %s.\n", colors[pb->fill_color]); //here we grab it from our color char array
-    printf("Border %s.\n",  pb->show_border == true ? "shown" : "not shown");
-    printf("The border color is %s.\n", colors[pb->border_color]); //here we grab it from our color char array
-    printf ("The border style is ");
 
-    switch(pb->border_style) //this field can be 0, 1 or 2 so its a bit trickier so we use switch with cases
+void show_settings(
+        const struct box_props *pb)  //with our pointer we go to different parts of the struct and check for values to print out
+{
+    printf("Box is %s.\n", pb->opaque == true ? "opaque" : "transparent");
+    printf("The fill color is %s.\n", colors[pb->fill_color]); //here we grab it from our color char array
+    printf("Border %s.\n", pb->show_border == true ? "shown" : "not shown");
+    printf("The border color is %s.\n", colors[pb->border_color]); //here we grab it from our color char array
+    printf("The border style is ");
+
+    switch (pb->border_style) //this field can be 0, 1 or 2 so its a bit trickier so we use switch with cases
     {
-        case SOLID  : printf("solid.\n"); break;
-        case DOTTED : printf("dotted.\n"); break;
-        case DASHED : printf("dashed.\n"); break;
-        default     : printf("unknown type.\n");
+        case SOLID  :
+            printf("solid.\n");
+            break;
+        case DOTTED :
+            printf("dotted.\n");
+            break;
+        case DASHED :
+            printf("dashed.\n");
+            break;
+        default     :
+            printf("unknown type.\n");
     }
 }

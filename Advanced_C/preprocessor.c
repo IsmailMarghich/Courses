@@ -9,9 +9,8 @@
 //#pragma GCC warning "This is a warning"
 //#pragma GCC error "This is an error"
 #pragma GCC message "This is a message" //these messages will be printed as a compiler message
-int main ( )
 
-{
+int main() {
     printf("%d\n", NUMBER); //print constant
 #undef NUMBER //we can un define our constant with #undef
     int NUMBER = 0;

@@ -2,8 +2,7 @@
 
 //bitmasks can be used to set multiple bits in a byte to either on or off with bitwise operators
 //for example u can use a bitmask that's made up of zeros except for 1 field and with an and operator to check whether a bit is turned on or off
-int main ( )
-{
+int main() {
     int flags = 15; //0000 1111
     int mask = 182; //1011 0110
 

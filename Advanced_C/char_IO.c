@@ -2,8 +2,7 @@
 #include <ctype.h>
 
 //in this file we will explore input and output functions with chars in C
-int main ( )
-{
+int main() {
     //input functions
     char ch = 0;
     //we can use both int and char as type definition, since numbers in chars just get converted to characters
@@ -12,9 +11,10 @@ int main ( )
     printf("I read with getchar: %c\n", getchar); //getchar does the same except that it always uses stdin as file
 
     //what if we wanted to read a character but ignore whitespaces
-    while(isspace(ch = (char)getchar()));
+    while (isspace(ch = (char) getchar()));
     {
-        ungetc(ch, stdin); //this ungetc function will push the space back to the stream, and thus the loop continues to the next character
+        ungetc(ch,
+               stdin); //this ungetc function will push the space back to the stream, and thus the loop continues to the next character
     }
     printf("char is %c\n", ch);
 

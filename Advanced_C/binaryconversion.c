@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 //In the C programming language u modify bits which is important when you are working with drivers or embedded devices
 //and it also handy for operating systems to store information about files in so called bit fields, where you can use a bit to indicate permissions for example
 //in this file as an introduction to this topic we will create functions to convert binary to decimal numbers and vice versa
@@ -7,8 +8,7 @@ int convertBinaryToDecimal(long long n);
 
 long long convertDecimalToBinary(int n);
 
-int main()
-{
+int main() {
 
     long long n;
     int decimalnumber;

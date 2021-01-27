@@ -11,13 +11,20 @@ struct node //our struct that will store data of node
     struct node *next; //pointer to the next node
 };
 
-struct node* createNode(int);
+struct node *createNode(int);
+
 void insertNodeAtTheBeginning();
+
 void insertNodeAtTheEnd();
+
 void insertNodeAtPosition();
+
 void deletePosition();
+
 void search();
+
 void updateValue();
+
 void display();
 
 struct node *newnode, *ptr, *prev, *temp;
@@ -26,8 +33,7 @@ struct node *head = NULL, *tail = NULL; //we have a tail and head in our linked 
 int main() {
     int ch = '\0';
 
-    while (true)
-    {
+    while (true) {
         printf("\n---------------------------------\n");
         printf("\nOperations on a linked list\n");
         printf("\n---------------------------------\n");
@@ -44,8 +50,7 @@ int main() {
         setlinebuf(stdout); //asking the user what he wants to do
         scanf("%d", &ch);
 
-        switch (ch)
-        {
+        switch (ch) {
             case 1:
                 insertNodeAtTheBeginning();
                 break;
@@ -81,45 +86,37 @@ int main() {
 /*
  * Creating Node
  */
-struct node* createNode(int val)
-{
-    newnode = (struct node *)malloc(sizeof(struct node)); //allocate memory to our first node
-    if (newnode == NULL)
-    {
+struct node *createNode(int val) {
+    newnode = (struct node *) malloc(sizeof(struct node)); //allocate memory to our first node
+    if (newnode == NULL) {
         printf("\nMemory was not allocated");
         return 0;
-    }
-    else
-    {
+    } else {
         newnode->value = val; //setting our value
         newnode->next = NULL; //setting our next to null
         return newnode;
     }
 }
 
-void insertNodeAtTheBeginning()
-{
+void insertNodeAtTheBeginning() {
     int val = 0;
 
     printf("\nEnter the value for the node: ");
     scanf("%d", &val);
     newnode = createNode(val);
-    if (head== tail && head == NULL) //if we dont have tail or head we create a head
+    if (head == tail && head == NULL) //if we dont have tail or head we create a head
     {
         head = tail = newnode;
         head->next = NULL;
         tail->next = NULL;
-    }
-    else
-    {
+    } else {
         temp = head; //if they already is a tail and head
         head = newnode; //we swap the head with new node, and set new node next value to old head
         head->next = temp;
     }
 }
 
-void insertNodeAtTheEnd()
-{
+void insertNodeAtTheEnd() {
     int val = 0;
 
     printf("\nEnter the value for the Node: ");
@@ -130,9 +127,7 @@ void insertNodeAtTheEnd()
         head = tail = newnode;
         head->next = NULL;
         tail->next = NULL;
-    }
-    else
-    {
+    } else {
         tail->next = newnode; //we set tails next to new tail
         tail = newnode; //tail becomes the new node
         tail->next = NULL; //the tail ends so set next to NULL
@@ -141,8 +136,7 @@ void insertNodeAtTheEnd()
     printf("\n----INSERTED----");
 }
 
-void insertNodeAtPosition()
-{
+void insertNodeAtPosition() {
     int pos, val, cnt = 0, i;
 
     printf("\nEnter the value for the Node: ");
@@ -151,31 +145,26 @@ void insertNodeAtPosition()
     printf("\nEnter the position ");
     scanf("%d", &pos);
     ptr = head;
-    while (ptr != NULL)
-    {
+    while (ptr != NULL) {
         ptr = ptr->next;
         cnt++;
     }
     if (pos == 1) //if position is at the beginning we check if there is heads or tail, and add it
     {
-        if (head == tail && head == NULL)
-        {
+        if (head == tail && head == NULL) {
             head = tail = newnode;
             head->next = NULL;
             tail->next = NULL;
-        }
-        else
-        {
+        } else {
             temp = head;
             head = newnode;
             head->next = temp;
         }
         printf("\nInserted");
-    }
-    else if (pos>1 && pos<=cnt) //if we find a position in range
+    } else if (pos > 1 && pos <= cnt) //if we find a position in range
     {
         ptr = head;
-        for (i = 1;i < pos;i++) //we try to go to the position
+        for (i = 1; i < pos; i++) //we try to go to the position
         {
             prev = ptr;
             ptr = ptr->next;
@@ -183,52 +172,39 @@ void insertNodeAtPosition()
         prev->next = newnode; //the previous node next, becomes the inserted node
         newnode->next = ptr; //the new node next becomes the old next of the previous node
         printf("\n----INSERTED----");
-    }
-    else
-    {
+    } else {
         printf("Position is out of range");
     }
 }
 
 
-void deletePosition()
-{
+void deletePosition() {
     int pos, cnt = 0, i;
 
-    if (head == NULL)
-    {
+    if (head == NULL) {
         printf("List is empy\n");
         printf(":No node to delete\n");
-    }
-    else
-    {
+    } else {
         printf("\nEnter the position of value to be deleted: ");
         scanf(" %d", &pos);
         ptr = head;
-        if (pos == 1)
-        {
+        if (pos == 1) {
             head = ptr->next;
             printf("\nElement deleted");
-        }
-        else
-        {
-            while (ptr != NULL)
-            {
+        } else {
+            while (ptr != NULL) {
                 ptr = ptr->next;
                 cnt = cnt + 1;
             }
             if (pos > 0 && pos <= cnt) //similar process of finding the position to delete
             {
                 ptr = head;
-                for (i = 1;i < pos;i++)
-                {
+                for (i = 1; i < pos; i++) {
                     prev = ptr;
                     ptr = ptr->next;
                 }
                 prev->next = ptr->next; //we set the previous node next, to the node after the one we want to delete, cutting it off
-            }
-            else
-            {
+            } else {
                 printf("Position is out of range ");
             }
             free(ptr);
@@ -238,84 +214,64 @@ void deletePosition()
 }
 
 
-void updateValue()
-{
+void updateValue() {
     int oldval, newval, flag = 0;
 
-    if (head == NULL)
-    {
+    if (head == NULL) {
         printf("List is empty\n");
         printf(":No nodes in the list to update\n");
-    }
-    else
-    {
+    } else {
         printf("\nEnter the value to be updated: ");
         scanf("%d", &oldval);
         printf("\nEnter the new value:");
         scanf("%d", &newval);
-        for (ptr = head;ptr != NULL;ptr = ptr->next) //we find the old value
+        for (ptr = head; ptr != NULL; ptr = ptr->next) //we find the old value
         {
-            if (ptr->value == oldval)
-            {
+            if (ptr->value == oldval) {
                 ptr->value = newval; //simply set old value to new one
                 flag = 1;
                 break;
             }
         }
-        if (flag == 1)
-        {
+        if (flag == 1) {
             printf("\nUpdated Successfully");
-        }
-        else
-        {
+        } else {
             printf("\nValue not found in List");
         }
     }
 }
 
-void search()
-{
+void search() {
     int flag = 0, key, pos = 0;
 
-    if (head == NULL)
-    {
+    if (head == NULL) {
         printf("List is empty\n");
         printf(":No nodes in the list\n");
-    }
-    else
-    {
+    } else {
         printf("\nEnter the value to search ");
         scanf("%d", &key);
-        for (ptr = head;ptr != NULL;ptr = ptr->next) //we iterate over list to find value
+        for (ptr = head; ptr != NULL; ptr = ptr->next) //we iterate over list to find value
         {
             pos = pos + 1;
-            if (ptr->value == key)
-            {
+            if (ptr->value == key) {
                 flag = 1; //if we find value we set flag to 1, otherwise we say we couldnt find it
                 break;
             }
         }
-        if (flag == 1)
-        {
+        if (flag == 1) {
             printf("\nElement %d found at %d position\n", key, pos);
-        }
-        else
-        {
+        } else {
             printf("\nElement %d not found in list\n", key);
         }
     }
 }
 
-void display()
-{
-    if (head == NULL)
-    {
+void display() {
+    if (head == NULL) {
         printf("List is empty\n");
         printf(":No nodes in the list to display\n");
-    }
-    else
-    {
-        for (ptr = head;ptr != NULL;ptr = ptr->next) //we iterate over the whole list
+    } else {
+        for (ptr = head; ptr != NULL; ptr = ptr->next) //we iterate over the whole list
         {
             printf("%d->", ptr->value); //and print the whole list
         }

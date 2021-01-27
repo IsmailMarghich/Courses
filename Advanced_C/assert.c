@@ -2,8 +2,7 @@
 #include <assert.h>
 
 //asserts can be used to prevent a program from running by asserting that a certain expression must be true or 1, with assert()
-int main ( )
-{
+int main() {
     int age;
 
     printf("Enter your age: ");

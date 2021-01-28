@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-//asserts can be used to prevent a program from running by asserting that a certain expression must be true or 1, with assert()
+//assert can be used to prevent a program from running by asserting that a certain expression must be true or 1, with assert()
 int main() {
     int age;
 

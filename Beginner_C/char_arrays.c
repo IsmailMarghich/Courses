@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
+//strings under the hood are arrays of characters, in this file we will create and use them in functions
 
-//in this file we will make 3 functions:
+//we will make 3 functions:
 //1 a function that gets the length of a string
 //2 a function that concatenates 2 strings
 //3 a functio that compares 2 strings to see if they are equal or not

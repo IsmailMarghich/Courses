@@ -16,3 +16,5 @@ Python/Udemy_ZeroToMastery_ML/bulldozerproject/data/TrainAndValid.csv
 Python/.idea/vcs.xml
 C/.idea/dictionaries/Gebruiker.xml
 Beginner_C/cmake-build-debug/CMakeFiles/C.dir/standard_library.c.o
+Django/placeholder.py
+*.obj

@@ -15,4 +15,6 @@ int main(){
     //C++ added smart pointers, which are an improvement to the old C pointers
     //because of this, I will not go into depth with the C pointers, check out my C folders for that
     //I will continue with pointers in the smart pointer section of this course
+
+    return 0;
 }

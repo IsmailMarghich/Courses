@@ -21,8 +21,8 @@ public:
     //we can edit these constructors, we can add any code into the code blocks
     Player(string name_val, int xp_val){
         cout << name_val << " You forgot to set health!" << endl;
-    }
-    //when we only use 2 arguments, this constructor is called and it will sent a message, we can do all sorts of things in constructors
+    }//when we only use 2 arguments, this constructor is called and it will sent a message, we can do all sorts of things in constructors
+
     Player(){ //this is the default constructor, when no arguments is passed
         name = "None"; //we set everything to zero so the variables are still set to something
         health = 0;

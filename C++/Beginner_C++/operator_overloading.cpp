@@ -15,15 +15,18 @@ public:
     }
     //we can also overload the << operator to display it more easily
     friend ostream& operator<<(ostream& os, const MyNumber& rhs); //friend the block of code so it can access this class
-
+    friend istream& operator>>(istream& is, MyNumber& rhs);
 
 }; //were returning an ostream, in the code block we add our number variable to the stream
 ostream& operator<<(ostream& os, const MyNumber& rhs){
-    os << rhs.number;
+    os << rhs.number; //put our class variable into the os stream
     return os;
 }
-
-
+    //similarly we can overload the >> operator for input
+    istream& operator>>(istream& is, MyNumber& rhs){
+    is >> rhs.number; //put the user input into the our class variable
+    return is;
+}
 int main(){
 
     MyNumber number1;
@@ -34,4 +37,7 @@ int main(){
     number2.printnumber();
     //both print 10
     cout << number1 << endl; //we can also just use cout to print the variable, because we overloaded the << operator
+    cout << "Enter a number to put into our class: " << endl;
+    cin >> number1;
+    cout << number1 << endl;
 }

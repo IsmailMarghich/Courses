@@ -3,4 +3,4 @@ project(Beginner_C__)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Beginner__ operator_overloading.cpp)
+add_executable(Beginner__ inheritance.cpp)

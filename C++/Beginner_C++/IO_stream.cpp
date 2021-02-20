@@ -29,5 +29,5 @@ int main(){
     cout << showpoint; //with showpoint modifier, it will add trailing zeroes to missing numbers until precision limit
     cout << pointnumber << endl;
 
-
+    //these are a few examples on how u can manipulate IO in C++, there is way more features and functions in C++
 }

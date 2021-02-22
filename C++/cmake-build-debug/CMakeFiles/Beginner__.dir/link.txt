@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Beginner__.dir/objects.a
-C:\PROGRA~1\MINGW-~1\mingw64\bin\ar.exe cr CMakeFiles\Beginner__.dir/objects.a @CMakeFiles\Beginner__.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\Beginner__.dir/objects.a -Wl,--no-whole-archive  -o Beginner__.exe -Wl,--out-implib,libBeginner__.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Beginner__.dir\linklibs.rsp

@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string> //standard C++ string library
+
 using namespace std;
 
-int main(){
+int main() {
 
     string s1 = "Frank";
     string s2 = {s1, 0, 3}; //within the curly braces, we can decide what characters are initialized into the string

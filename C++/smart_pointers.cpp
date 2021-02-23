@@ -1,21 +1,24 @@
 #include <iostream>
 #include <vector>
 #include <memory>
+
 using namespace std;
+
 //smart pointers are pointers which manage their own memory, and come with extra features compared to C pointers
 class Account { //A basic class to use as example for smart pointers
 public:
     int balance = 0;
 
-    void display(){
+    void display() {
         cout << "Balance: " << balance << endl;
     }
 
-    Account(int amount){
+    Account(int amount) {
         balance = amount;
     }
 };
-int main () {
+
+int main() {
     { //create a specific code block for the smart pointer
         //only one unique pointer can point to the same object, this is handy to prevent 2 pointers pointing to the same thing
         unique_ptr<int> p1{new int{100}}; //we need to initialize the pointer based on a template, this case an integer
@@ -52,7 +55,8 @@ int main () {
     shared_ptr<Account> p2 = p1; //assign p1 to p2
     p1->display(); //both print 1000
     p2->display();
-    cout << p1.use_count() << endl; //with use_count method, we can see how many shared pointers point to the same object
+    cout << p1.use_count()
+         << endl; //with use_count method, we can see how many shared pointers point to the same object
 
     return 0;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 int globalvar = 5; //we can set global variables outside of a function
 //global variables can be accessed from everywhere in the program, unlike local variables
-int main(){
+int main() {
     //in C++ we define variables similar to how it is done in C, we specify a type and variable name
     //and then assign a value, if we want to. C++ has lots of different datatype for variables
 

@@ -2,9 +2,10 @@
 #include <iomanip>
 
 using namespace std;
+
 //C++ use streams as interface between the program and input and output devices
 //a common stream is the ostream and istream, which we can access with cout and cin respectively
-int main(){
+int main() {
     int number;
 
     cout << "Enter a number" << endl;
@@ -21,10 +22,12 @@ int main(){
     cout << "Enter a float: " << endl;
     cin >> pointnumber;
     //float modifiers
-    cout << pointnumber << endl; //by default 6 digits is the precision for floating point, this starts from the first digit
+    cout << pointnumber
+         << endl; //by default 6 digits is the precision for floating point, this starts from the first digit
     cout << setprecision(9); //change our precision to 9
     cout << pointnumber << endl;
-    cout << fixed; //with the fixed modifier, now the precision will start from the first number after the dot, not first digit
+    cout
+            << fixed; //with the fixed modifier, now the precision will start from the first number after the dot, not first digit
     cout << pointnumber << endl;
     cout << showpoint; //with showpoint modifier, it will add trailing zeroes to missing numbers until precision limit
     cout << pointnumber << endl;

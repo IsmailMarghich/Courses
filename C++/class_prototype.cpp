@@ -16,8 +16,9 @@ void Account::set_balance(double bal) { //implementation of our functions
     balance = bal;
     cout << "I set the balance to: " << balance << endl;
 }
- //the :: is the scope resolution operator, we tell C++ to specifically go into that class for that method
- //we have to do this because the implementation of the method isn't in the class just the prototype
+
+//the :: is the scope resolution operator, we tell C++ to specifically go into that class for that method
+//we have to do this because the implementation of the method isn't in the class just the prototype
 double Account::get_balance() {
     return balance;
 }

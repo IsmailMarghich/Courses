@@ -3,17 +3,17 @@
 using namespace std;
 //if we wanna repeatably run pieces of code, we can use looping
 
-int main(){
+int main() {
     //a for loop consists of 3 parts
     //initialization condition increment
     for (int i = 1; i <= 5; i++) //this will run the code in the loop, until i is not less than 6 anymore
         cout << "Loop: " << i << endl; //each iteration, i will increase by 1
 
     //there is also a newer for loop, introduced in C++ 11, it is called the range based for loop
-    int array[] = {1,2,3,4,5};
+    int array[] = {1, 2, 3, 4, 5};
     int sum = 0;
     // (type)variable collection to iterate over
-    for (int number: array){
+    for (int number: array) {
         cout << number << endl; //this will print each item in the array
         sum += number; //each iteration, we add the number to the sum
     }
@@ -22,7 +22,7 @@ int main(){
     int condition = 1;
     //there is also a while loop, where code gets repeated until a single expression becomes false
     //this is checked before executing the code the first time, unlike the for loop
-    while(condition <= 5){
+    while (condition <= 5) {
         cout << condition << endl; //print our number everytime
         ++condition; //increment it, after 5 iterations, the loop stops
     }
@@ -45,7 +45,7 @@ int main(){
     //with the break keyword, we can stop the keyword
     string answer = "continue";
 
-    while (answer == "continue"){
+    while (answer == "continue") {
         cout << "Do you want to continue or break?: " << endl;
         cin >> answer;
         if (answer == "break")

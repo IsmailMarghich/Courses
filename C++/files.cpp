@@ -1,16 +1,17 @@
 #include <iostream>
+
 using namespace std;
 //to read and edit files we use the file streams in C++
 #include <fstream>
 
-int main(){
+int main() {
     //lets first read from a file, which says Hello, and has a number 100 in it
     fstream input_file; //declare a stream
     string line; //declare a string where we can put our read text
     int number; //an int to store the number in
 
     input_file.open("text.txt"); //open our text file
-    if (!input_file){  //if text file isnt there, error
+    if (!input_file) {  //if text file isnt there, error
         cerr << "Could not open file";
         return -1;
     }
@@ -20,10 +21,10 @@ int main(){
     cout << number << endl; //print 100
 
     //now lets write to a file
-    ofstream output_file {"output.txt"}; //create an ofstream object, we name it output.txt
+    ofstream output_file{"output.txt"}; //create an ofstream object, we name it output.txt
     string input;
 
-    if (!output_file){
+    if (!output_file) {
         cerr << "Error creating file" << endl;
         return -1;
     }

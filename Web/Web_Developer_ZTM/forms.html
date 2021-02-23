@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--In this file we will cover HTML's way of taking input, forms-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms!</title>
+</head>
+<body>
+<div> <!--div is a way to divide our html code, this will be handy later on for styling the html with CSS-->
+    <form> <!--form tag allows us to do multiple types of input from the user-->
+    First Name: <input type="text" name="firstname"><br> <!--input requires attributes to know what kind of input it is, in this case text-->
+    Last Name: <input type = "text" name="lastname"><br> <!--we dont collect any data entered btw-->
+    Email: <input type = "email" required><br> <!--an email input will only accept valid emails
+    the required tag makes is to the user HAS to enter the input to submit-->
+    Password: <input type="password" minlength="5"><br><!--password attribute allows u to have a password field, this one has a minimum length of 5-->
+    Birthday: <input type="date"><br> <!--birthday input adds a calender to enter dates-->
+    <br>Gender:<br> <!--we can use radio input so users can pick something from options-->
+    <input type="radio" name="gender" value="Male">Male<br> <!--to make the buttons know they belong together we use names-->
+    <input type="radio" name="gender" value="Female">Female<br>
+    <input type="radio" name="gender" value="Other">Other<br> <!--now you can only select 1 button at a time-->
+
+    <br> Pets: <br>
+    <input type="checkbox">Cat<br>
+    <input type="checkbox">Dog<br>
+    <input type="checkbox">Hamster <br>
+
+    Cars: <br>
+    <select> <!--we can make a drop down menu with select tag, and add options to this dropdown menu with option tag-->
+        <option value="Volvo">Volvo</option>
+        <option value="Audi">Audi</option>
+        <option value="Ford">Ford</option>
+        <option value="GM">GM</option>
+    </select><br>
+    <input type="submit" value="Register"> <!--we can have a submit button, which we can modify-->
+    <input type="reset"> <!--a reset button will remove the text entered in our form-->
+    </form>
+</div>
+
+<a href="tags.html"> Click here to go to the previous HTML file</a>
+</body>
+</html>

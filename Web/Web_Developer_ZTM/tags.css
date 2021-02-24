@@ -1,0 +1,42 @@
+/*
+CSS allows us to style HTML
+Selector {
+    Property: value;
+this is how css syntax generally goes ^}*/
+body{
+    background-image: url("background.jpg"); /*we can add a background image and change its size*/
+    background-size: cover;
+    /*we select a tag or other selector and add properties to it*/
+}
+.top{ /*we now style every tag which class is 'top'*/
+    color:lightblue;/*these properties will be applied to all tags*/
+    font-family: "Segoe UI Emoji", serif; /*we use the Segoe font, if browser doesnt support it, then serif is used*/
+    text-align: center; /*we center our top text and add a border*/
+    /*margin is the distance between this object and the rest of the objects*/
+    margin: 15px 20px 30px 20px; /*top, right, bottom, left margin*/
+    /*padding is the distance between the text and other objects and the border*/
+    padding: 15px 20px 30px 20px; /*top, right, bottom, left padding*/
+    border: 5px solid;
+}
+h1 {
+    color: red;
+}
+h1 {
+    color:orange; /*Cascading means it takes the last styling of a property, so paragraphs will be green. not red*/
+}
+p, li, a{
+    color:white;
+    font-family: "Segoe UI Emoji", serif;
+
+}
+.fruit{ /*there is specific properties for images*/
+
+    display: block; /*these 3 properties will align the images to the center*/
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#bold_italic{ /*we can also select by div tags, with a # and then the ID of the div tag*/
+    color: wheat;
+    font-size: 20px;
+ }

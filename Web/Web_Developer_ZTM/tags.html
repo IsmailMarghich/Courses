@@ -4,30 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Tags!</title>
+    <link rel="stylesheet" type="text/css" href="tags.css">
 </head>
 <body>
-<p> Hello, world!</p> <!--this is a paragraph, its normal text-->
-<h1> I am a big header!</h1> <!-- headers are bigger pieces of text, they range from h1 to h6, which are different sizes-->
-<em> I am italic!<br></em> <!--em tags make the text italic, <br> tag breaks the line, the next text will be on next line-->
-<strong> I am bold!<br></strong> <!--strong tags make the text bold-->
-<b><i> I am both!</i></b> <!--we can combine lots of these tags -->
-<p> Ordered list: </p>
-<ol> <!--ol tags are ordered lists-->
-    <li>Banana</li> <!--with li tags we can add items to our ordered list-->
-    <li>Orange</li>
-    <li>Apple</li>
-    <li>Grape</li>
-</ol>
-<p>Unordered list</p> <!--Unordered lists use dots instead of numbers-->
-<ul>
-    <li>Pineapple</li>
-    <img src="small-pineapple.jpg"> <!--img tag adds images, it uses a src attribute which can be a local file-->
-    <hr> <!--hr tag adds a horizontal line which we can use to separate the items-->
-    <li>Strawberry</li>
-    <img src ="https://www.thermofisher.com/blog/food/wp-content/uploads/sites/5/2015/08/single_strawberry__isolated_on_a_white_background.jpg"
-         width = "270" height="180"> <!--the src attribute can also be a link from the internet, we can also modify height and width-->
-</ul>
-<a href="forms.html">Click here to go to the next HTML file</a> <!--with anchor tag, we can add hyperlinks and other functionality like downloads-->
+<header>
+    <nav>
+        <p class="top">Welcome to my web developer showcase page <br>
+        Check out my Github at:
+        <a href="https://github.com/IsmailMarghich"> https://github.com/IsmailMarghich</a>
+        <br>This page is for basic HTML tags, CSS selectors and properties</p>
+    </nav>
+</header>
+<section>
+    <p> Hello, world!</p> <!--this is a paragraph, its normal text-->
+    <h1> I am a big header!</h1> <!-- headers are bigger pieces of text, they range from h1 to h6, which are different sizes-->
+    <div id="bold_italic"><em> I am italic!<br></em> <!--em tags make the text italic, <br> tag breaks the line, the next text will be on next line-->
+    <strong> I am bold!<br></strong> <!--strong tags make the text bold-->
+    <b><i> I am both!</i></b></div> <!--we can combine lots of these tags -->
+    <p> Ordered list: </p>
+    <ol> <!--ol tags are ordered lists-->
+        <li>Banana</li> <!--with li tags we can add items to our ordered list-->
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Grape</li>
+    </ol>
+    <p>Unordered list</p> <!--Unordered lists use dots instead of numbers-->
+    <ul>
+        <li>Pineapple</li>
+        <img class="fruit" src="small-pineapple.jpg"> <!--img tag adds images, it uses a src attribute which can be a local file-->
+        <hr> <!--hr tag adds a horizontal line which we can use to separate the items-->
+        <li>Strawberry</li>
+        <img class="fruit" src ="https://www.thermofisher.com/blog/food/wp-content/uploads/sites/5/2015/08/single_strawberry__isolated_on_a_white_background.jpg"
+             width = "270" height="180"> <!--the src attribute can also be a link from the internet, we can also modify height and width-->
+    </ul>
+    <a href="forms.html">Click here to go to the next HTML file</a> <!--with anchor tag, we can add hyperlinks and other functionality like downloads-->
+</section>
 </body>
 </html>
 

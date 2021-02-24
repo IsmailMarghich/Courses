@@ -1,0 +1,20 @@
+#form{
+    font-family: "Segoe UI Emoji", serif;
+    background-image: url("paper.jpg");
+    background-size: cover;
+    align-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+
+}
+body, html{
+background-color: #008b8b;
+}
+a,header{
+    text-align: left;
+    margin: 10px;
+    font-family: "Segoe UI Emoji", serif;
+    color: rgb(208, 239, 239);
+}
+

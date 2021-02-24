@@ -4,7 +4,7 @@ Selector {
     Property: value;
 this is how css syntax generally goes ^}*/
 body{
-    background-image: url("background.jpg"); /*we can add a background image and change its size*/
+    background-image: url("https://i.pinimg.com/originals/76/4b/3a/764b3ab3e8efde8313490141e923586e.jpg"); /*we can add a background image and change its size*/
     background-size: cover;
     /*we select a tag or other selector and add properties to it*/
 }

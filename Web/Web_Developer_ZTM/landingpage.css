@@ -1,6 +1,6 @@
 html,
 body {
-  background: url(header.jpg) no-repeat center center fixed; 
+  background: url(https://www.luro.io/content/images/2019/12/laptop-pic-half-closed.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -15,6 +15,7 @@ hr {
 }
 
 h1 {
+  margin-bottom: 200px;
   font-size: 3rem; 
   color: #e2dbdb;
 }

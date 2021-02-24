@@ -1,0 +1,30 @@
+
+.container{
+    display: flex; /*now we can use flexbox to position our images*/
+    flex-wrap: wrap; /*by default the images will be on one line, but wrap will make into boxes*/
+    justify-content: center;
+
+}
+body{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/14/Dry_ground.jpg");
+}
+h1{
+    font-family: Andalus, serif;
+    font-size: 3em;
+    width: 400px;
+    text-align: center;
+    border: 5px solid black;
+    background-color: white; /*this overrides the body's background, so the text stays readable*/
+
+
+}
+img{
+    width: 450px; /*resizing our images*/
+    height: 300px;
+    transition: all 0.5s; /*we can add transitions to these images*/
+    margin: 12px;
+}
+img:hover{
+    transform: scale(1.1); /*when hovered, the images will increase in size by 1.1*/
+
+}

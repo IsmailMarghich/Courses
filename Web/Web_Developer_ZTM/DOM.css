@@ -1,0 +1,6 @@
+/*A basic stylesheet file to be manipulated by dom.js*/
+.title{
+    font-family: "Segoe UI Emoji", serif;
+    font-size: 40px;
+    color: #7abcff;
+}

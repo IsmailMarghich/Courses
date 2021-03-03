@@ -29,9 +29,9 @@ console.log(modernstring);
 const add = (a,b) => a + b; /*function that takes 2 variables and returns the sum of them*/
 console.log(add(5,7));
 
-const substract = (a) => (b) => a - b; /*currying a function means changing it to take multiple parameters seperately*/
-console.log(substract(6)(3));
-const removeFrom5 = substract(5) /*the benefit of currying is that it allows us to split up a function*/
+const subtract = (a) => (b) => a - b; /*currying a function means changing it to take multiple parameters seperately*/
+console.log(subtract(6)(3));
+const removeFrom5 = subtract(5) /*the benefit of currying is that it allows us to split up a function*/
 console.log(removeFrom5(3));
 
 const compose = (f, g) => (a) => f(g(a)); /*a compose function allows us to execute multiple functions in one*/

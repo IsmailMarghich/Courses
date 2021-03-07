@@ -37,3 +37,19 @@ console.log(removeFrom5(3));
 const compose = (f, g) => (a) => f(g(a)); /*a compose function allows us to execute multiple functions in one*/
 const sum = (num) => num + 1; /*a function that adds 1 to input*/
 compose(sum, sum)(5); /*use 2 sums on 5*/
+
+/*theres more ways of looping in Javascript*/
+/*for of loop allows us to loop without making a variable, we are iterating over the array, rather than putting in indexes*/
+let basket = ["apples", "bananas", "grapes"];
+for (item of basket){
+    console.log(item);
+}
+objectbasket = {
+    apples: 5,
+    bananas: 15,
+    grapes: 1000
+}
+/*a for in loop makes use of enumeration, because we cannot iterate over an object*/
+for (item in objectbasket){
+    console.log(item);
+}

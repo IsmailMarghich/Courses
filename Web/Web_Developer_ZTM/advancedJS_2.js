@@ -40,3 +40,52 @@ class Wizard extends Player{ /*extends means it inherits from the class*/
 let wizard_levi = new Wizard("Wizard Levi", 100, "Ackerman", "Fire");
 wizard_levi.introduce();
 wizard_levi.battlecry();
+/*we will now go over modern javascript features that were added recently*/
+/*ES7 2016*/
+let string = "Hello";
+console.log(string.includes('e'));/*.includes method returns true if a string or array contains the argument*/
+console.log(2**2); /*we can use ** to square, 2 to the power of 2*/
+
+/*ES8 2017*/
+console.log(string.padStart(10)); /*pad tart and padend add spaces to the beginning or end of strings, based on length of string*/
+console.log(string.padEnd(10) + "end"); /*10 - 5 = 5 spaces*/
+
+/*lets say we have an object that stores data and we wanna print its data*/
+let object = {
+    name1 : 'John',
+    name2 : 'James',
+    name3 : 'Jonatan'
+}
+Object.keys(object).forEach((key) => { /*.keys allows use to access the keys of an object like an array*/
+    console.log(key, object[key]) /*loop to print all keys and values in an object*/
+}) /*there is an easier way to do these however */
+Object.values(object).forEach(value => { /*.values can only access values*/
+    console.log(value);
+})
+Object.entries(object).forEach(name => { /*.entries logs them as arrays, which allows us to perform array methods on them*/
+    console.log(name);
+})
+/*ES9 2018*/
+
+/*ES10 2019*/
+let list = [1,[2,3],[4,5]]; /*lets say we have an array with nested arrays*/
+console.log(list.flat()); /*.flat will remove the nested ones and make it as if there is no nested arrays*/
+
+let trim_start = "    hello"
+let trim_end = "hello      "
+console.log(trim_start.trimStart()); /*trim start removes spaces from start of string*/
+console.log(trim_end.trimEnd()); /*trim start removes spaces from end of string*/
+
+/*we can convert a 2d array into key value pairs stored in an object*/
+let userarray = [["Bob",5],["James", 7],["Patrick", 9]];
+let obj = Object.fromEntries(userarray);
+console.log(Object.entries(obj));
+
+let string1 = "5";
+
+try { /*try this block of code*/
+    let error = true - string1 /*invalid operation*/
+} catch{ /*if there is an error, run this code*/
+    console.log("Error!!");
+}
+

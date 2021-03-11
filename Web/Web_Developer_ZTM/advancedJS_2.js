@@ -67,6 +67,18 @@ Object.entries(object).forEach(name => { /*.entries logs them as arrays, which a
 })
 /*ES9 2018*/
 
+const animals = {
+    tiger: 10,
+    donkey: 5,
+    monkey: 3
+} /*object spreading operator*/
+const { tiger, ...rest} = animals /*... stores the remaining elements of an object, the elements to be removed are before ...*/
+console.log(rest); /*prints donkey and monkey, but not tiger*/
+
+
+
+
+
 /*ES10 2019*/
 let list = [1,[2,3],[4,5]]; /*lets say we have an array with nested arrays*/
 console.log(list.flat()); /*.flat will remove the nested ones and make it as if there is no nested arrays*/

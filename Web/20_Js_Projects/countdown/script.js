@@ -2,7 +2,6 @@
 const inputContainer = document.getElementById('input-container');
 const countdownForm = document.getElementById('countdownForm');
 const dateElement = document.getElementById('date-picker');
-const titleElement = document.getElementById('title');
 
 const countdownElement = document.getElementById('countdown');
 const countdownElementTitle = document.getElementById('countdown-title');
@@ -13,6 +12,7 @@ const completeElement = document.getElementById('complete');
 const completeElementInfo = document.getElementById('complete-info');
 const completeBtn = document.getElementById('complete-button');
 
+const alarmSound = document.getElementById('alarm-sound')
 /*global variables we use and change through our program*/
 let countdownTitle = '';
 let countdownDate = '';
@@ -51,6 +51,7 @@ const updateDOM = () => {
             clearInterval(countdownActive);
             completeElementInfo.textContent = `${countdownTitle} finished on ${countdownDate}`;
             completeElement.hidden = false;
+            alarmSound.play() /*play the alarm sound*/
         } else{
             /*else, show the countdown in progress*/
             /*populate countdown*/
@@ -95,6 +96,7 @@ const reset = () =>{
     countdownTitle = '';
     countdownDate = '';
     localStorage.removeItem('countdown');
+    alarmSound.pause();
 }
 
 const restorePreviousCountdown = () => { /*if user returns we want to display the previous countdown*/

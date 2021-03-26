@@ -29,9 +29,6 @@ const validate = (nameValue, urlValue) => {
         return false;
     }
 
-    if (urlValue.match(regex)){
-        alert('matches')
-    }
     if (!urlValue.match(regex)){
         alert('Please provide valid web address');
         return false;

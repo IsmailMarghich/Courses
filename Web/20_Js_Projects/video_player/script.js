@@ -19,12 +19,11 @@ const showPlayButton = () => {
 }
 
 const togglePlay = () => {
-    if (video.paused){
+    if (video.paused) {
         video.play();
         playButton.classList.replace('fa-play', 'fa-pause')
         playButton.setAttribute('title', 'Pause')
-    }
-    else {
+    } else {
         video.pause();
         showPlayButton();
     }
@@ -33,7 +32,7 @@ const togglePlay = () => {
 video.addEventListener('ended', showPlayButton);
 
 /*Calculate display time format*/
-const displayTime = (time) =>{
+const displayTime = (time) => {
     const minutes = Math.floor(time / 60);
     let seconds = Math.floor(time % 60);
     seconds = seconds > 9 ? seconds : `0${seconds}`; /*add a zero if seconds is under 10*/
@@ -44,7 +43,7 @@ const updateProgress = () => { /*update progress bar as video plays*/
     progressBar.style.width = `${video.currentTime / video.duration * 100}%` /*use a string and % to change progress bar based on time in video*/
     /*pass current and full time of video to display function, and then update DOM*/
     currentTime.textContent = `${displayTime(video.currentTime)} /`;
-    duration.textContent= `${displayTime(video.duration)}`;
+    duration.textContent = `${displayTime(video.duration)}`;
 }
 
 const setProgress = (e) => {
@@ -60,10 +59,10 @@ let lastVolume = 1 /*var for whether sound on/off*/
 const changeVolume = (e) => {
     let volume = e.offsetX / volumeRange.offsetWidth /*volume is ratio of the bar u press on*/
     /*Rounding volume up or down*/
-    if (volume < 0.1){
+    if (volume < 0.1) {
         volume = 0;
     }
-    if (volume > 0.9){
+    if (volume > 0.9) {
         volume = 1;
     }
     volumeBar.style.width = `${volume * 100}%` /*change width based on volume %*/
@@ -71,14 +70,14 @@ const changeVolume = (e) => {
     lastVolume = volume;
     /*change volume icon depending on volume*/
     volumeIcon.className = '';
-    if(volume > 0.7){
-        volumeIcon.classList.add('fas','fa-volume-up')
+    if (volume > 0.7) {
+        volumeIcon.classList.add('fas', 'fa-volume-up')
     }
-    if(volume < 0.7 && volume >  0){
-        volumeIcon.classList.add('fas','fa-volume-down')
+    if (volume < 0.7 && volume > 0) {
+        volumeIcon.classList.add('fas', 'fa-volume-down')
 
-    }else if(volume === 0){
-        volumeIcon.classList.add('fas','fa-volume-off')
+    } else if (volume === 0) {
+        volumeIcon.classList.add('fas', 'fa-volume-off')
     }
     lastVolume = volume; /*make sure to update volume boolean after changing volume*/
 }
@@ -90,12 +89,12 @@ const toggleMute = () => {
         lastVolume = video.volume
         video.volume = 0; /*mute*/
         volumeBar.style.width = 0;
-        volumeIcon.classList.add('fas','fa-volume-mute')
+        volumeIcon.classList.add('fas', 'fa-volume-mute')
         volumeIcon.setAttribute('title', 'Unmute')
     } else {
         video.volume = lastVolume; /*unmute*/
         volumeBar.style.width = `${lastVolume * 100}%` /*get % of volumebar*/
-        volumeIcon.classList.add('fas','fa-volume-up')
+        volumeIcon.classList.add('fas', 'fa-volume-up')
         volumeIcon.setAttribute('title', 'Mute')
 
     }
@@ -124,12 +123,13 @@ function closeFullscreen() {
     }
     video.classList.remove('video-fullscreen') /*make video small again*/
 }
+
 let fullscreen = false; /*boolean for fullscreen or not*/
 /*Toggle fullscreen*/
 const toggleFullscreen = () => {
-    if (!fullscreen){
+    if (!fullscreen) {
         openFullscreen(player)
-    }else {
+    } else {
         closeFullscreen();
     }
     fullscreen = !fullscreen /*reverse value of fullscreen boolean*/

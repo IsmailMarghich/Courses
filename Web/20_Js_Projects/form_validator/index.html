@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up!</h1>
+        <!--Form-->
+        <form id="form">
+            <!--Full name-->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Full Name" name="name" id="name"
+                    required minlength="3" maxlength="100">
+            </div>
+            <!--Phone Number-->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" placeholder="555-555-5555" name="phone" id="phone"
+                       required pattern="^(?:0|(?:\+|00) ?31 ?)(?:(?:[1-9] ?(?:[0-9] ?){8})|(?:6 ?-? ?[1-9] ?(?:[0-9] ?){7})|(?:[1,2,3,4,5,7,8,9]\d ?-? ?[1-9] ?(?:[0-9] ?){6})|(?:[1,2,3,4,5,7,8,9]\d{2} ?-? ?[1-9] ?(?:[0-9] ?){5}))$">
+            </div>                              <!--Dutch phone number regex pattern-->
+            <!--Email Address-->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="email@address.com" id="email"
+                       required name="email">
+            </div>
+            <!--Website URL-->
+            <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" placeholder="google.com" id="website"
+                       required name="website">
+            </div>
+            <!--Password-->
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" placeholder="******* (Min 8. Characters)" id="password1"
+                       required
+                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                       title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+                                            <!--password validation pattern-->
+            </div>
+            <!--Confirm password-->
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" placeholder="*******" id="password2"
+                       required name="password"
+                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                       title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+                <!--password validation pattern-->>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!--Error/success-->
+        <div class="message-container">
+            <h3 id="message">Don't Hesitate!</h3>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -55,10 +55,10 @@ function getSavedBestScores() {
         bestScoreArray = JSON.parse(localStorage.bestScores);
     } else {
         bestScoreArray = [
-            { questions: 10, bestScore: finalTimeDisplay },
-            { questions: 25, bestScore: finalTimeDisplay },
-            { questions: 50, bestScore: finalTimeDisplay },
-            { questions: 99, bestScore: finalTimeDisplay },
+            {questions: 10, bestScore: finalTimeDisplay},
+            {questions: 25, bestScore: finalTimeDisplay},
+            {questions: 50, bestScore: finalTimeDisplay},
+            {questions: 99, bestScore: finalTimeDisplay},
         ];
         localStorage.setItem('bestScores', JSON.stringify(bestScoreArray));
     }
@@ -115,7 +115,7 @@ function scoresToDOM() {
     finalTimeEl.textContent = `${finalTimeDisplay}s`;
     updateBestScore();
     // Scroll to Top, go to Score Page
-    itemContainer.scrollTo({ top: 0, behavior: 'instant' });
+    itemContainer.scrollTo({top: 0, behavior: 'instant'});
     showScorePage();
 }
 
@@ -189,7 +189,7 @@ function createEquations() {
         secondNumber = getRandomInt(9);
         const equationValue = firstNumber * secondNumber;
         const equation = `${firstNumber} x ${secondNumber} = ${equationValue}`;
-        equationObject = { value: equation, evaluated: 'true' };
+        equationObject = {value: equation, evaluated: 'true'};
         equationsArray.push(equationObject);
     }
     // Loop through for each wrong equation, mess with the equation results, push to array
@@ -202,7 +202,7 @@ function createEquations() {
         wrongFormat[2] = `${firstNumber + 1} x ${secondNumber} = ${equationValue}`;
         const formatChoice = getRandomInt(2);
         const equation = wrongFormat[formatChoice];
-        equationObject = { value: equation, evaluated: 'false' };
+        equationObject = {value: equation, evaluated: 'false'};
         equationsArray.push(equationObject);
     }
     shuffle(equationsArray);

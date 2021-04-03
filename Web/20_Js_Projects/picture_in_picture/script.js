@@ -9,11 +9,12 @@ async function selectMediaStream() {
         videoElement.onloadedmetadata = () => { /*when video is loaded*/
             videoElement.play();
         }
-    }catch (e) {
+    } catch (e) {
         console.log(e)
     }
 }
-button.addEventListener('click', async () =>{
+
+button.addEventListener('click', async () => {
     /*disable button*/
     button.disabled = true;
     /*start picture in picture*/

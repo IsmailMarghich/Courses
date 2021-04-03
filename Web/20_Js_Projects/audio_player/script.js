@@ -48,14 +48,14 @@ const pauseSong = () => {
 
 //Event listeners
 /*Play or pause event listener*/
-playBtn.addEventListener('click', () =>{
-    (isPlaying ? pauseSong(): playSong()) /*if the song is playing, pause, if its not playing, play*/
+playBtn.addEventListener('click', () => {
+        (isPlaying ? pauseSong() : playSong()) /*if the song is playing, pause, if its not playing, play*/
     }
 )
 // Update DOM with songs
-const loadSong = (song) =>{
+const loadSong = (song) => {
     title.textContent = song.displayName;
-    artist.textContent= song.artist;
+    artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.png`;
 }
@@ -64,8 +64,8 @@ let songIndex = 0;
 
 // Next song
 
-const nextSong = ()=>{
-    if (songIndex === songs.length - 1){ /*if we reach final song, go to first song*/
+const nextSong = () => {
+    if (songIndex === songs.length - 1) { /*if we reach final song, go to first song*/
         songIndex = -1;
     }
     songIndex++;
@@ -74,8 +74,8 @@ const nextSong = ()=>{
 }
 
 //Previous song
-const prevSong = ()=>{
-    if (songIndex === 0){ /*if we try to go back from first song, go to last song*/
+const prevSong = () => {
+    if (songIndex === 0) { /*if we try to go back from first song, go to last song*/
         songIndex = songs.length;
     }
     songIndex--;
@@ -87,31 +87,31 @@ loadSong(songs[songIndex]);
 
 // Update progress bar and time
 const updateProgressBar = (e) => {
-    if (isPlaying){
-        const { duration, currentTime} = e.target; /*grab duration and current time of song from event*/
+    if (isPlaying) {
+        const {duration, currentTime} = e.target; /*grab duration and current time of song from event*/
         //Update progress bar width
         const progressPercent = (currentTime / duration) * 100;
         progress.style.width = `${progressPercent}%`;
         //Calculate display for duration
         const durationMinutes = Math.floor(duration / 60); /*calculate minutes and round down*/
         let durationSeconds = Math.floor(duration % 60);
-        if (durationSeconds < 10){ /*if its under 10, and such there is only 1 digit*/
+        if (durationSeconds < 10) { /*if its under 10, and such there is only 1 digit*/
             durationSeconds = `0${durationSeconds}` /*make it into a string with 0 as first digit*/
         }
         //Delay switching duration element to avoid NaN while numbers are still being calculated
-        if (durationSeconds){
+        if (durationSeconds) {
             durationElement.textContent = `${durationMinutes}:${durationSeconds}`
         }
         const currentMinutes = Math.floor(currentTime / 60); /*calculate minutes and round down*/
         let currentSeconds = Math.floor(currentTime % 60);
-        if (currentSeconds < 10){ /*if its under 10, and such there is only 1 digit*/
+        if (currentSeconds < 10) { /*if its under 10, and such there is only 1 digit*/
             currentSeconds = `0${currentSeconds}` /*make it into a string with 0 as first digit*/
         }
         currentTimeElement.textContent = `${currentMinutes}:${currentSeconds}`
     }
 }
 
-const setProgressBar = (e)=>{
+const setProgressBar = (e) => {
     const width = e.target.clientWidth;
     const clickX = e.offsetX;
     const {duration} = music;

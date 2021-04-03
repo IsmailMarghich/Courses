@@ -14,7 +14,7 @@ let favorites = {};
 
 const showContent = (page) => {
     window.scrollTo({top: 0, behavior: "smooth"}) /*scroll back up to the start*/
-    if (page === 'results'){
+    if (page === 'results') {
         resultsNav.classList.remove('hidden'); /*show the home navbar*/
         favoritesNav.classList.add('hidden'); /*hide the favorites navbar*/
     } else {
@@ -25,8 +25,7 @@ const showContent = (page) => {
 }
 
 
-
-const createDOMNodes = (page) =>{ /*this will make the cards that we will display on the website*/
+const createDOMNodes = (page) => { /*this will make the cards that we will display on the website*/
     const currentArray = page === 'results' ? resultsArray : Object.values(favorites) /*check wether we need to render results or favorites page*/
     currentArray.forEach((result) => {
         /*Card container*/
@@ -53,12 +52,12 @@ const createDOMNodes = (page) =>{ /*this will make the cards that we will displa
         /*Save Text*/
         const saveText = document.createElement('p');
         saveText.classList.add('clickable');
-        if (page === 'results'){
+        if (page === 'results') {
             saveText.textContent = 'Add favorite';
-            saveText.setAttribute('onclick',`saveFavorite('${result.url}')`);
-        }else {
+            saveText.setAttribute('onclick', `saveFavorite('${result.url}')`);
+        } else {
             saveText.textContent = 'Remove favorite';
-            saveText.setAttribute('onclick',`removeFavorite('${result.url}')`);
+            saveText.setAttribute('onclick', `removeFavorite('${result.url}')`);
 
         }
         /*Card text*/
@@ -85,7 +84,7 @@ const createDOMNodes = (page) =>{ /*this will make the cards that we will displa
 
 const updateDOM = (page) => {
     /*get favorites from local storage*/
-    if (localStorage.getItem('nasaFavorites')){
+    if (localStorage.getItem('nasaFavorites')) {
         favorites = JSON.parse(localStorage.getItem('nasaFavorites'))
     }
     imagesContainer.textContent = '';
@@ -101,7 +100,7 @@ async function getNasaPictures() {
         const response = await fetch(apiUrl)
         resultsArray = await response.json()
         updateDOM('results');
-    }catch (e) {
+    } catch (e) {
         console.log(e);
     }
 }
@@ -109,13 +108,13 @@ async function getNasaPictures() {
 // Add results to favorites
 const saveFavorite = (itemURL) => {
     /*Loop through the results array to find the favorite that the user selected*/
-    resultsArray.forEach((item)=> {
-        if (item.url.includes(itemURL) && !favorites[itemURL]){
+    resultsArray.forEach((item) => {
+        if (item.url.includes(itemURL) && !favorites[itemURL]) {
             favorites[itemURL] = item; /*set the card object in the favorites array*/
             /*Show save confirmation for 2 seconds*/
             saveConfirmed.hidden = false;
-            setTimeout(()=> {
-               saveConfirmed.hidden = true /*hide the confirmation after 2000ms*/
+            setTimeout(() => {
+                saveConfirmed.hidden = true /*hide the confirmation after 2000ms*/
             }, 2000);
             localStorage.setItem('nasaFavorites', JSON.stringify(favorites))
         }
@@ -123,8 +122,8 @@ const saveFavorite = (itemURL) => {
 }
 /*Remove item from favorites*/
 
-const removeFavorite = (itemURL)=>{
-    if (favorites[itemURL]){ /*look through favorites*/
+const removeFavorite = (itemURL) => {
+    if (favorites[itemURL]) { /*look through favorites*/
         delete favorites[itemURL] /*if its found, delete it*/
         localStorage.setItem('nasaFavorites', JSON.stringify(favorites)) /*update localstorage*/
         updateDOM('favorites')

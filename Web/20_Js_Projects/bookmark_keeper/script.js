@@ -9,27 +9,31 @@ const bookmarksContainer = document.getElementById('bookmarks-container');
 let bookmarks = []; /*array to store our bookmarks in*/
 /*Show modal, focus on input*/
 /*Our modal is what allows uses to add bookmarks with their URL and the name they want to use.*/
-const showModal = () =>{
+const showModal = () => {
     modal.classList.add('show-modal'); /*show the modal*/
     websiteNameElement.focus(); /*focus on the text box so use can enter text easily*/
 }
 
 
 /*Modal event listeners*/
-modalClose.addEventListener('click', ()=>{ modal.classList.remove('show-modal')});
+modalClose.addEventListener('click', () => {
+    modal.classList.remove('show-modal')
+});
 modalShow.addEventListener('click', showModal)
-window.addEventListener('click',(e) => { console.log(e.target === modal ? modal.classList.remove('show-modal') : false)});
+window.addEventListener('click', (e) => {
+    console.log(e.target === modal ? modal.classList.remove('show-modal') : false)
+});
 /*Validate user form*/
 const validate = (nameValue, urlValue) => {
     const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&/=]*)/g; /*regex to validate url*/
     const regex = new RegExp(expression);
 
-    if (!nameValue || !urlValue){
+    if (!nameValue || !urlValue) {
         alert('Please enter values for both fields')
         return false;
     }
 
-    if (!urlValue.match(regex)){
+    if (!urlValue.match(regex)) {
         alert('Please provide valid web address');
         return false;
     }
@@ -40,14 +44,14 @@ const validate = (nameValue, urlValue) => {
 const buildBookmarks = () => {
     /*build items*/
     bookmarksContainer.textContent = ""; /*clear the bookmark container to prevent duplicate bookmarks being built*/
-    bookmarks.forEach((bookmark)=> {
+    bookmarks.forEach((bookmark) => {
         const {name, url} = bookmark; /*get name and url from bookmark*/
         /*Item*/
         const item = document.createElement('div');
         item.classList.add('item'); /*add classes*/
         /*close icon*/
         const closeIcon = document.createElement('i');
-        closeIcon.classList.add('fas','fa-times');
+        closeIcon.classList.add('fas', 'fa-times');
         closeIcon.setAttribute('title', 'Delete Boomark') /*add hover text*/
         closeIcon.setAttribute('onclick', `deleteBookmark('${url}')`) /*run our delete bookmark function*/
         /*Favicon/link container */
@@ -70,9 +74,9 @@ const buildBookmarks = () => {
 }
 
 /*Fetch bookmarks from local storage*/
-const fetchBookmarks = () =>{
+const fetchBookmarks = () => {
     /*get bookmarks from local storage if available*/
-    if (localStorage.getItem('bookmarks')){
+    if (localStorage.getItem('bookmarks')) {
         bookmarks = JSON.parse(localStorage.getItem('bookmarks')); /*add localstorage bookmarks to our array*/
     } else {
         /*create bookmarks array in localStorage*/
@@ -88,8 +92,8 @@ const fetchBookmarks = () =>{
 }
 /*Delete bookmark*/
 const deleteBookmark = (url) => {
-    bookmarks.forEach((bookmark, i)=>{ /*iterate over bookmark array to find the url to delete*/
-        if (bookmark.url === url){
+    bookmarks.forEach((bookmark, i) => { /*iterate over bookmark array to find the url to delete*/
+        if (bookmark.url === url) {
             bookmarks.splice(i, 1); /*go to index i, and remove 1 element*/
         }
     });
@@ -103,10 +107,10 @@ const storeBookmark = (e) => {
     /*store user input*/
     const nameValue = websiteNameElement.value;
     let urlValue = websiteUrlElement.value; /*we use let because we want to add https ourselves to the link*/
-    if (!urlValue.includes('http://') && !urlValue.includes('https://')){ /*if url doesnt have http or https*/
+    if (!urlValue.includes('http://') && !urlValue.includes('https://')) { /*if url doesnt have http or https*/
         urlValue = `https://${urlValue}`; /*add it ourselves*/
     }
-    if (!validate(nameValue, urlValue)){
+    if (!validate(nameValue, urlValue)) {
         return false;
     }
     const bookmark = { /*store the users data into a bookmark object*/

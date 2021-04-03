@@ -10,14 +10,13 @@ const validateForm = () => {
     /*using constraint API*/
     isValid = form.checkValidity();
     /*if it isn't valid, style the form for visual feedback*/
-    if (!isValid)
-    {
+    if (!isValid) {
         message.textContent = 'Please fill out all fields.'
         message.style.color = 'red'
         messageContainer.style.borderColor = 'red'
         return;
     }
-    if (password1Element.value === password2Element.value){
+    if (password1Element.value === password2Element.value) {
         passwordsMatch = true;
         password1Element.style.borderColor = 'green'
         password2Element.style.borderColor = 'green'
@@ -31,7 +30,7 @@ const validateForm = () => {
         return
     }
     /*If form is valid and passwords match*/
-    if ( isValid && passwordsMatch){
+    if (isValid && passwordsMatch) {
         message.textContent = 'Successfully registered.'
         message.style.color = 'green'
         messageContainer.style.borderColor = 'green'
@@ -54,14 +53,10 @@ const processFormData = (e) => {
     /*Validate form*/
     validateForm();
     /*Submit data if valid,*/
-    if (isValid && passwordsMatch){
+    if (isValid && passwordsMatch) {
         storeFormData();
     }
 }
-
-
-
-
 
 
 /*Event Listeners*/

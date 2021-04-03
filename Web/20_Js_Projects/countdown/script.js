@@ -33,7 +33,7 @@ dateElement.setAttribute('min', today)
 
 /*This is going to populate the countdown screen*/
 const updateDOM = () => {
-    countdownActive = setInterval(() =>{ /*this will run this block of code every second to update the count down*/
+    countdownActive = setInterval(() => { /*this will run this block of code every second to update the count down*/
         const now = new Date().getTime(); /*current time in milliseconds since 1970*/
         const distance = countdownValue - now; /*get the amount of milliseconds in between the target date and now*/
 
@@ -46,13 +46,13 @@ const updateDOM = () => {
         inputContainer.hidden = true;
 
         /*if the countdown has ended, show complete*/
-        if (distance < -0){
+        if (distance < -0) {
             countdownElement.hidden = true;
             clearInterval(countdownActive);
             completeElementInfo.textContent = `${countdownTitle} finished on ${countdownDate}`;
             completeElement.hidden = false;
             alarmSound.play() /*play the alarm sound*/
-        } else{
+        } else {
             /*else, show the countdown in progress*/
             /*populate countdown*/
             countdownElementTitle.textContent = `${countdownTitle}`; /* add the title that the user entered*/
@@ -77,15 +77,15 @@ const updateCountdown = (e) => {
     localStorage.setItem('countdown', JSON.stringify(savedCountdown));
     /* Get number version of current Date, update DOM*/
     /*Check for valid date*/
-    if (countdownDate === ''){
+    if (countdownDate === '') {
         alert('Please select a valid date')
-    } else{
+    } else {
         countdownValue = new Date(countdownDate).getTime();
         updateDOM();
     }
 }
 /*Reset all values*/
-const reset = () =>{
+const reset = () => {
     /*hide countdowns, show input*/
     countdownElement.hidden = true;
     completeElement.hidden = true;
@@ -101,7 +101,7 @@ const reset = () =>{
 
 const restorePreviousCountdown = () => { /*if user returns we want to display the previous countdown*/
     /*get countdown from localstorage*/
-    if(localStorage.getItem('countdown')){
+    if (localStorage.getItem('countdown')) {
         inputContainer.hidden;
         savedCountdown = JSON.parse(localStorage.getItem('countdown'));
         countdownTitle = savedCountdown.title;
@@ -113,7 +113,7 @@ const restorePreviousCountdown = () => { /*if user returns we want to display th
 }
 
 /*Event Listener*/
-countdownForm.addEventListener('submit',updateCountdown)
+countdownForm.addEventListener('submit', updateCountdown)
 resetBtn.addEventListener('click', reset);
 completeBtn.addEventListener('click', reset);
 

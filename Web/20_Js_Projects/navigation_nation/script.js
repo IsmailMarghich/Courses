@@ -7,19 +7,20 @@ const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
 
 const navItems = [nav1, nav2, nav3, nav4, nav5]
+
 // control navigation animation
 function navAnimation(direction1, direction2) {
     navItems.forEach((nav, i) => {
-        nav.classList.replace(`slide-${direction1}-${i+1}`, `slide-${direction2}-${i+1}`);
+        nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
     })
 }
 
-const toggleNav =() =>{
+const toggleNav = () => {
     /*Toggle menu bars, open/close*/
     menuBars.classList.toggle('change')
     /*Toggle menu active or not*/
     overlay.classList.toggle('overlay-active');
-    if (overlay.classList.contains('overlay-active')){
+    if (overlay.classList.contains('overlay-active')) {
         /*Animate in overlay*/
         overlay.classList.replace('overlay-slide-left', 'overlay-slide-right')
         /*Animate in nav items*/

@@ -14,11 +14,33 @@ class Car {}
 let car: Car = new Car(); /*a variable of type Car class*/
 /*object literal*/
 let point: { x: number; y: number } = {
-  /*we add tying by adding an annotation to the properties*/ x: 10,
+  x: 10 /*we add tying by adding an annotation to the properties*/,
   y: 20,
 };
-/*functions*/
+/*typing on objects*/
+const profile = {
+  name: "bob",
+  age: 25,
+  coords: {
+    lat: 2,
+    long: 57,
+  },
+  setAge(age: number): void {
+    this.age = age;
+  },
+};
+const {
+  /*we can add typing to destructuring by specifying the structure of the object and its types*/
+  age,
+}: {
+  age: number;
+} = profile;
+/*destructuring an object from an object*/
+const {
+  /*destructuring*/ coords: { lat, long },
+}: { coords: { lat: number; long: number } } = profile; /*structure and typing*/
 
+/*functions*/
 /*function return values, as well as the arguments can have types*/
 const drawNumber = (max: number): number => {
   return Math.floor(
@@ -32,8 +54,11 @@ const voidFunc = (i: number): void => {
     i
   );
 };
+/*types are used by the compiler to detect errors before running our code
+ * types also allow other developers to more easily understand what the point of a function or variable is*/
+/*type inference refers to typescript automatically assigning types to values, we dont have to implicitly add types everytime
+ * but sometimes the typescript compiler cant figure it out itself:*/
 const json =
-  /*typescript cant always figure the types of values by itself*/
   '{"X":false, "Z":50}'; /*1, a JSON string that stores coordinates, typescript has no idea what types these values are*/
 const coordinates: { X: number; Z: number } = JSON.parse(
   json
@@ -56,7 +81,3 @@ numbers.forEach((item) => {
     numberAboveZero.push(item);
   }
 });
-/*types are used by the compiler to detect errors before running our code
- * types also allow other developers to more easily understand what the point of a function or variable is*/
-/*type inference refers to typescript automatically assigning types to values, we dont have to implicitly add types ourselves
- * */

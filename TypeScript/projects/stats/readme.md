@@ -1,0 +1,2 @@
+A typescript program that showcases the use of interfaces and composition by analyzing a csv file with soccer/football match data.
+For comparison, I also made a second version of some files that use inheritance.

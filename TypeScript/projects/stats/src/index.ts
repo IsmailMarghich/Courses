@@ -1,21 +1,19 @@
 /*in this file we will load, parse, analyze and report soccer match data using various libraries*/
+import { MatchReader } from "./MatchReader";
 import { CsvFileReader } from "./CsvFileReader";
-import { MatchResult } from "./MatchResult";
-const reader = new CsvFileReader("src/football.csv");
+import { ConsoleReport } from "./reportTargets/ConsoleReport";
+import { WinsAnalysis } from "./analyzers/WinsAnalysis";
+import { Summary } from "./Summary";
+import { HtmlReport } from "./reportTargets/HtmlReport";
+/*create an object that satisfies DataReader interface*/
+const csvFileReader = new CsvFileReader("src/football.csv");
+/*create an instance of match reader and pass something that satisfies DataReader interface*/
+const matchReader = new MatchReader(csvFileReader);
+matchReader.load();
 
-reader.read();
+const winAnalysis = new WinsAnalysis("Wolves");
 
-/*we can use enums to count wins of teams and show to other developers that these values are related*/
-
-let manUnitedWins = 0;
-for (let match of reader.data) {
-  /*iterate over each row*/
-  if (match[1] === "Man United" && match[5] === MatchResult.HomeWin) {
-    /*when man united wins as home team*/
-    manUnitedWins++;
-  } else if (match[2] === "Man United" && match[5] === MatchResult.AwayWin) {
-    /*when man united wins as away team*/
-    manUnitedWins++;
-  }
-}
-console.log(`Manchester united won ${manUnitedWins} games`);
+const summarize = new Summary(winAnalysis, new ConsoleReport());
+summarize.buildPrintReport(matchReader.matches);
+const summarizeHtml = new Summary(winAnalysis, new HtmlReport());
+summarizeHtml.buildPrintReport(matchReader.matches);

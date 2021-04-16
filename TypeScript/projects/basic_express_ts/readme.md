@@ -1,0 +1,2 @@
+A simple login and logout program with express and typescript, in this example we only added typing and an interface.
+Hence the name basic, in our next project we will write the same program but with better express and Typescript integration.

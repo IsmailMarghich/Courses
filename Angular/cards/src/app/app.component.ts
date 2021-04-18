@@ -28,5 +28,13 @@ export class AppComponent {
       username: '@biker1337',
       content: 'Went on a lovely bike ride today.',
     },
+    {
+      /*we can easily add another card component by adding more objects to our post array*/
+      title: 'Mountain Biking',
+      imageUrl:
+        'https://s14761.pcdn.co/wp-content/uploads/2020/09/Propain-spindrift-cf-2021-enduro-test-review36-810x551.jpg',
+      username: '@biker1337',
+      content: 'Went on a lovely bike ride today.',
+    },
   ];
 }

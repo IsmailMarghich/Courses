@@ -1,0 +1,72 @@
+<div class="container">
+  <h3>Payment Form</h3>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name</label>
+      <input class="form-control" (input)="onNameChange($event)"/>
+    </div>
+
+    <div class="col">
+      <label><b>Name</b></label>
+      <div>
+        <!--add caps on every word using titlecase pipe-->
+        {{name | titlecase}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input type="date" class="form-control" (input)="onDateChange($event)"/>
+    </div>
+
+    <div class="col">
+      <label><b>Date</b></label>
+      <div>
+        <!--use date pipe to transform date selector input into our preferred format-->
+        {{date | date:'longDate'}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Amount</label>
+      <input class="form-control" (input)="onAmountChange($event)"/>
+    </div>
+
+    <div class="col">
+      <label><b>Amount</b></label>
+      <div>
+        {{amount | currency : 'EUR':'symbol'}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Height</label>
+      <input class="form-control" (input)="onHeightChange($event)"/>
+    </div>
+
+    <div class="col">
+      <label><b>Height</b></label>
+      <div>
+        {{height | number: '1.0-1'}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles</label>
+      <input class="form-control" (input)="onMilesChange($event)"/>
+    </div>
+
+    <div class="col">
+      <label><b>Miles</b></label>
+      <div>
+        <!--our own custom pipe to convert from miles to kilometers-->
+        <!--we can add multiple pipes to the same value, this time we use number pipe to prevent lots of digits-->
+        {{miles | convert: 'km'| number: '1.0-4'}}
+      </div>
+    </div>
+  </div>
+</div>

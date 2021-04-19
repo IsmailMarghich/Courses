@@ -1,0 +1,40 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination" >
+    <!--disable button to go to current page-->
+    <li class="page-item"
+        [appCustom]="{disabled: currentPage == 0}">
+      <a  (click)="currentPage = currentPage -1"
+         class="page-link">Prev</a>
+    </li>
+    <!--we can only apply 1 structural directive per element, so we can use ng containers to add more-->
+    <ng-container *ngFor="let image of images; let i = index;">
+      <li
+        class="page-item"
+        [appCustom]="{active: i === currentPage}"
+        *ngIf="checkWindowIndex(i)">
+        <a (click)="currentPage = i"
+           class="page-link" >{{i + 1}}</a>
+      </li>
+    </ng-container>
+    <li class="page-item"
+        [appCustom]="{disabled: currentPage === images.length - 1 }">
+      <a
+        (click)="currentPage = currentPage + 1"
+        class="page-link">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<div> <!--we can pass arguments to our custom directive-->
+  <h4> {{images[currentPage].title}}</h4>
+  <img [src]="images[currentPage].url"/>
+</div>
+
+<!--we can also use switch statements as directives with ngswitch-->
+<!--<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">first page</div>
+  <div *ngSwitchCase="1">second page</div>
+  <div *ngSwitchCase="2">third page</div>
+  <div *ngSwitchCase="3">fourth page</div>
+  <div *ngSwitchDefault>default page</div>
+</div>-->

@@ -2,11 +2,11 @@
   <div class="ui secondary pointing menu">
     <!--our links to the other pages in our application, we use routerLink so the website doesnt have to refresh
     we also use routerLinkActive to show which page the user is on-->
+    <a class="item" routerLinkActive="inactive" routerLink="">Home</a>
     <a class="item" routerLinkActive="active" routerLink="/elements">Elements</a>
     <a class="item" routerLinkActive="active" routerLink="/collections">Collection</a>
     <a class="item" routerLinkActive="active" routerLink="/views">View</a>
     <a class="item" routerLinkActive="active" routerLink="/mods">Mods</a>
-
   </div>
   <div class="ui segment">
     <router-outlet></router-outlet>

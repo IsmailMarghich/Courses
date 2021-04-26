@@ -1,0 +1,16 @@
+<form [formGroup]="cardForm">
+  <input type="text" formControlName="name">
+  <ng-container *ngIf="cardForm.controls.name.errors">
+    <div *ngIf="cardForm.controls.name.errors.required">
+      You need to enter something
+    </div>
+    <div *ngIf="cardForm.controls.name.errors.minlength">
+      You need to provide at least {{cardForm.controls.name.errors.minlength.requiredLength}} characters
+    </div>
+  </ng-container>
+</form>
+
+
+<div>Form Contents: {{cardForm.value | json}}</div>
+<div>Form is valid: {{cardForm.valid | json}}</div>
+<div>Errors: {{cardForm.controls.name.errors | json}}</div>

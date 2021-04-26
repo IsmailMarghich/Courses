@@ -1,16 +1,34 @@
-<form [formGroup]="cardForm">
-  <input type="text" formControlName="name">
-  <ng-container *ngIf="cardForm.controls.name.errors">
-    <div *ngIf="cardForm.controls.name.errors.required">
-      You need to enter something
-    </div>
-    <div *ngIf="cardForm.controls.name.errors.minlength">
-      You need to provide at least {{cardForm.controls.name.errors.minlength.requiredLength}} characters
-    </div>
-  </ng-container>
-</form>
+<div class="columns">
+  <div class="column">
+    <app-card
+      [name]="cardForm.value.name"
+      [cardNumber]="cardForm.value.cardNumber"
+      [expiration]="cardForm.value.expiration"
+    ></app-card>
+  </div>
+  <div class="column">
+    <form [formGroup]="cardForm">
+      <app-input label="Name" [control]="cardForm.get('name')"></app-input>
+      <app-input label="Card Number" [control]="cardForm.get('cardNumber')"></app-input>
 
-
-<div>Form Contents: {{cardForm.value | json}}</div>
-<div>Form is valid: {{cardForm.valid | json}}</div>
-<div>Errors: {{cardForm.controls.name.errors | json}}</div>
+      <div class="columns">
+        <div class="column">
+          <app-input label="Expiration" [control]="cardForm.get('expiration')"></app-input>
+        </div>
+        <div class="column">
+          <app-input label="Security" [control]="cardForm.get('securityCode')"></app-input>
+        </div>
+      </div>
+      <div class="buttons">
+        <button
+          class="button is-primary"
+          [disabled]="!cardForm.valid"
+          type="submit">Submit</button>
+        <button
+          class="button is-warning" type="button" (click)="onResetClick()">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
